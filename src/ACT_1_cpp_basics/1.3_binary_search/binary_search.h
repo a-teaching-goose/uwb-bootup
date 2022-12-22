@@ -1,0 +1,1 @@
+int binary_search(const int *data, int length, int target);
