@@ -13,7 +13,6 @@ protected:
 public:
     Animal(const std::string &name, const std::string &gender, int age);
 
-    // what would happen without "virtual" here.
-    // Try it.
+    // what would happen without "virtual" here? Try it.
     virtual void speak(const std::string &words);
 };

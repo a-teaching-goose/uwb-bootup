@@ -1,13 +1,11 @@
-# BootUp for CSS 342
-
-name: css 342 grader
+name: CPP BootUp CI
 
 on:
   push:
     branches: [ main ]
 
 jobs:
-  CSS342_Grader_Bot:
+  UWB_CPP_BootUp_CI:
 
     runs-on: ubuntu-18.04
 

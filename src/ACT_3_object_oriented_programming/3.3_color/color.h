@@ -23,7 +23,7 @@ public:
     bool operator==(const Color &rhs) const;
 
     // operator overload
-    Color operator+(Color const &another_color) {
+    Color operator+(Color const &another_color) const {
         switch (color) {
             case RED:
                 switch (another_color.color) {
@@ -46,12 +46,13 @@ public:
                 }
             case BLUE:
                 switch (another_color.color) {
+                    // notice a different way to return object
                     case GREEN:
-                        return Color(CYAN);
+                        return {CYAN};
                     case BLUE:
-                        return Color(BLUE);
+                        return {BLUE};
                     case RED:
-                        return Color(MAGENTA);
+                        return {MAGENTA};
                 }
         }
         return Color(WHITE);

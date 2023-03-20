@@ -4,7 +4,7 @@
 
 TEST(cpp, steal_a_laptop) {
     // request and borrow a laptop
-    Laptop *my_borrowed_laptop = borrow_laptop();
+    Laptop *my_borrowed_laptop = borrow_a_laptop();
 
     // use the laptop
     my_borrowed_laptop->start_up();

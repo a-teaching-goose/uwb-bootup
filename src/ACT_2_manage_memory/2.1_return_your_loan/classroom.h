@@ -1,3 +1,3 @@
 #include "laptop.h"
 
-Laptop *borrow_laptop();
+Laptop *borrow_a_laptop();
