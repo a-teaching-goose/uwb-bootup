@@ -1,6 +1,17 @@
-#include "gtest/gtest.h"
+#include <cstdio>
+#include <iostream>
 
-TEST(cpp, memory_pointer) {
+void playground_memory_pointer();
+
+void playground_reference();
+
+int main(int argc, char **argv) {
+    playground_memory_pointer();
+
+    playground_reference();
+}
+
+void playground_memory_pointer() {
     int var = 10;
     printf("address of var is %x\n", &var);
 
@@ -32,7 +43,7 @@ TEST(cpp, memory_pointer) {
     std::cout << "\n";
 }
 
-TEST(cpp, reference_basics) {
+void playground_reference() {
     int var = 5;
 
     //int &ref_var = 5; // what's wrong with this?

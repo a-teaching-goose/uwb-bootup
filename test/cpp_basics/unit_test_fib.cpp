@@ -11,7 +11,7 @@ TEST(fib, test) {
                     121393, 196418, 317811};
     int size = 29;
 
-    // below is a cooler way to get the size without hardcoding numbers in code
+    // below is a cooler way to get the size without hard-coding numbers in code
     // any kind of hardcoded value in code is almost always a bad idea
     // int size = sizeof(expect) / sizeof(expect[0]);
 
