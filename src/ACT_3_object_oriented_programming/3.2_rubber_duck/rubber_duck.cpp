@@ -34,6 +34,9 @@ std::string RubberDuck::color() {
     return "yellow";
 }
 
+/*
+ * operator overload
+ */
 bool RubberDuck::operator==(const RubberDuck &another_duck) const {
     return name == another_duck.name;
 }

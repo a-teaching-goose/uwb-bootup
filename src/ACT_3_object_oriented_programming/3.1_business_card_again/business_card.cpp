@@ -1,6 +1,7 @@
 #include <iostream>
 
 class BusinessCard {
+
 private:
     std::string company_name;
     std::string ins_handle;
@@ -9,7 +10,6 @@ private:
     int office_number;
 
 public:
-
     BusinessCard(const std::string &name,
                  const std::string &company_name,
                  const std::string &ins_handle,
@@ -26,6 +26,7 @@ public:
                address + ", " +
                name + ", " +
                std::to_string(office_number);
+        // sort of like toString() in Java
     }
 };
 
