@@ -7,4 +7,6 @@ int fib_recursion(int n) {
     }
 
     return fib_recursion(n - 1) + fib_recursion(n - 2);
+
+    // is this faster than the other two implementation?
 }

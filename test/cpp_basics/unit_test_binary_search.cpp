@@ -3,7 +3,7 @@
 #include "gtest/gtest.h"
 #include "../util.h"
 
-TEST(binary_search, null_array) {
+TEST(binary_search, invalid_length) {
     std::vector<int> lengths = {0, 1, -2};
     for (int length: lengths) {
         int actual = binary_search(nullptr, length, 3);
@@ -49,13 +49,10 @@ TEST(binary_search, basic) {
 
     // debug this
     delete[] array;
+
+    // anything else worth being tested here?
 }
 
-/*
- * OK TO MAKE CHANGES TO THIS FUNCTION
- * This test needs additional work to pass some validations
- * Do not change any given lines. OK to add new line(s)
- */
 TEST(binary_search, in_between) {
     const int SIZE = 2;
     int *array = new int[SIZE]{2, 4};
@@ -68,7 +65,7 @@ TEST(binary_search, in_between) {
     };
 
     std::vector<int> search_target = {
-            0,
+            1,
             2,
             3,
             4,
@@ -95,7 +92,7 @@ TEST(binary_search, in_between) {
     delete[] array;
 }
 
-TEST(binary_search, has_duplicates) {
+TEST(binary_search, has_duplicate_targets) {
     std::vector<int *> input_array = {
             new int[4]{1, 3, 3, 4},
             new int[4]{1, 2, 3, 5},
@@ -121,11 +118,17 @@ TEST(binary_search, has_duplicates) {
     };
 
     ASSERT_EQ(input_array.size(), search_target.size());
+    ASSERT_EQ(input_array.size(), input_arraySize.size());
 
     for (int i = 0; i < input_array.size(); i++) {
+
         int index = binary_search(input_array[i], input_arraySize[i], search_target[i]);
+
         ASSERT_TRUE(index >= 0 && index < input_arraySize[i]) << case_string(i);
+
+        // here the test verifies search finds at least one of the target occurrences
         ASSERT_EQ(input_array[i][index], search_target[i]) << case_string(i);
+
         delete[] input_array[i];
     }
 }
