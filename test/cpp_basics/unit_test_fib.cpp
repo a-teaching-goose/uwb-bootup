@@ -18,6 +18,7 @@ TEST(fib, test) {
     for (int i = 0; i < size; i++) {
         int actual_efficient_space = fib_space_efficient(i);
         int actual_inefficient_space = fib_space_inefficient(i);
+        int actual_recursion = fib_recursion(i);
 
 #ifdef MANUAL_TEST
         // manual test
@@ -30,11 +31,16 @@ TEST(fib, test) {
             printf("case %d failed. expect=%d vs actual=%d\n", i, expect[i], actual_inefficient_space);
             break;
         }
+        if (expect[i] != actual_recursion) {
+            printf("case %d failed. expect=%d vs actual=%d\n", i, expect[i], actual_recursion);
+            break;
+        }
 #else
         // instead, use this
         std::string case_str = case_string(i);
         ASSERT_EQ(expect[i], actual_efficient_space) << case_str;
         ASSERT_EQ(expect[i], actual_inefficient_space) << case_str;
+        ASSERT_EQ(expect[i], actual_recursion) << case_str;
 #endif
     }
 }
