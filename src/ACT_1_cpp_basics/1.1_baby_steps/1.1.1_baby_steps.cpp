@@ -85,7 +85,7 @@ void baby_steps() {
     for (int i = 0; i < 3; i++) {
         printf("arr3[%d] = %d\n", i, arr3[i]);
     }
-    delete[] arr3;
+    delete[] arr3;  // you didn't need this in Java
 
     /*
      * loop
