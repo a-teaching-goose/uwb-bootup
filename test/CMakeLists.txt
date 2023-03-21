@@ -2,6 +2,7 @@ FILE(GLOB ProblemSource cpp_basics/unit_test_*.cpp
         manage_memory/unit_test_*.cpp
         object_oriented_programming/unit_test_*.cpp
         object_oriented_programming/playground_*.cpp
+        cpp_basics/playground_*.cpp
         util.cpp)
 add_executable(${PROJECT_NAME}_unit_test main.cpp ${ProblemSource})
 
