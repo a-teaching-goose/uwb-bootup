@@ -19,6 +19,7 @@ int sum(uint length, const int array[]) {
         sum += array[i];
     }
     return sum;
+    // can be replaced with just return sum(length, array);
 }
 
 int sum(const int *array, uint length) {

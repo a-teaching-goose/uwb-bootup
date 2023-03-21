@@ -98,7 +98,7 @@ void baby_steps() {
      * condition
      */
     for (int i = 0; i < 5; i++) {
-        if (i % 2 == 0) {
+        if (i % 2 == 0) {   // % mod operator
             printf("arr1[%d] = %d\n", i, arr1[i]);
         }
     }
@@ -118,6 +118,9 @@ void baby_steps() {
     }
     std::cout << "\n";
 
+    /*
+     * template
+     */
     increment_by<float>(arr2, 5, 0.5);
     for (int i = 0; i < 5; i++) {
         printf("arr2[%d] = %f\n", i, arr2[i]);
