@@ -1,11 +1,12 @@
 #include <cstdio>
 #include <iostream>
 
-std::string name_card_string();
-
-std::string
-name_card_string(const std::string &company_name, const std::string &ins_handle, const std::string &address,
-                 const std::string &name, int office_number);
+// forward declarations
+std::string name_card_string(const std::string &company_name,
+                             const std::string &ins_handle,
+                             const std::string &address,
+                             const std::string &name,
+                             int office_number);
 
 int main(int argc, char **argv) {
     std::string company_name = "University of Washington Bothell";
@@ -32,12 +33,11 @@ int main(int argc, char **argv) {
                                                          office_number) << std::endl;
 }
 
-std::string
-name_card_string(const std::string &company_name,
-                 const std::string &ins_handle,
-                 const std::string &address,
-                 const std::string &name,
-                 int office_number) {
+std::string name_card_string(const std::string &company_name,
+                             const std::string &ins_handle,
+                             const std::string &address,
+                             const std::string &name,
+                             int office_number) {
     return company_name + ", " +
            ins_handle + ", " +
            address + ", " +

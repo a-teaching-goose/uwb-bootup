@@ -43,12 +43,21 @@ TEST(bubble_sort, basic) {
             new int[5]{-1, 1, 2, 6, 9},
     };
 
+    /*
+     * verify input sizes
+     */
     ASSERT_EQ(input_array.size(), expects.size());
     ASSERT_EQ(input_array.size(), input_array_sizes.size());
 
+    /*
+     * test bubble sort
+     */
     for (int i = 0; i < input_array.size(); i++) {
+
         bubble_sort(input_array[i], input_array_sizes[i]);
+
         ASSERT_ARRAY_EQUAL<int>(expects[i], input_array[i], input_array_sizes[i]);
+
         delete[] input_array[i];
         delete[] expects[i];
     }
