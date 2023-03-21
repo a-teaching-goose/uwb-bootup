@@ -12,7 +12,7 @@ One option is to get these from AWS EC2. You get a little virtual machine as fre
 After sshing onto the machine, clone the repo:
 
 ```bash
-git clone https://github.com/a-teaching-goose/2022-bootup.git 
+git clone https://github.com/a-teaching-goose/uwb-bootup.git 
 ```
 
 - Install required dependencies
