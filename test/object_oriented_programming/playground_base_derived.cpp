@@ -7,7 +7,7 @@
 
 #ifndef SKIP_FOR_CI
 // any problem?
-TEST(base_derived, use_base) {
+TEST(base_derived, use_base_on_stack) {
     BaseClass base(6);
     PRINT("\t>>>>>> Base capacity: " + TO_STRING(base.get_capacity()));
 
@@ -15,7 +15,7 @@ TEST(base_derived, use_base) {
 }
 
 // any problem?
-TEST(base_derived, use_base_pointer) {
+TEST(base_derived, use_base_pointer_on_heap) {
     BaseClass *p_base = new BaseClass(6);
     PRINT("\t>>>>>> Base capacity: " + TO_STRING(p_base->get_capacity()));
 
@@ -25,7 +25,7 @@ TEST(base_derived, use_base_pointer) {
 }
 
 // any problem?
-TEST(base_derived, use_derived) {
+TEST(base_derived, use_derived_on_stack) {
     DerivedClass derived(6);
     PRINT("\t>>>>>> Derived capacity: " + TO_STRING(derived.get_capacity()));
 
@@ -34,7 +34,7 @@ TEST(base_derived, use_derived) {
 }
 
 // any problem?
-TEST(base_derived, use_derived_pointer) {
+TEST(base_derived, use_derived_pointer_on_heap) {
     DerivedClass *p_derived = new DerivedClass(6);
     PRINT("\t>>>>>> Derived capacity: " + TO_STRING(p_derived->get_capacity()));
 

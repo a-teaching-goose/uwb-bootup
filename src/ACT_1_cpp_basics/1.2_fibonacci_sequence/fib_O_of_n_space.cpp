@@ -19,4 +19,8 @@ int fib_space_inefficient(int n) {
     delete[]data;
 
     return ret;
+
+    // how to improve this code?
+    // what's the complexity?
+    // do we need the data array?
 }

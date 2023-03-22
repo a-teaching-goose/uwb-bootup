@@ -10,6 +10,7 @@ void ASSERT_ARRAY_EQUAL(T *ArrayA, T *ArrayB, T size) {
 }
 
 TEST(bubble_sort, null_array) {
+    // what's a vector?
     std::vector<int> lengths = {0, 1, -2};
     for (int length: lengths) {
         ASSERT_NO_FATAL_FAILURE(bubble_sort(nullptr, length));
