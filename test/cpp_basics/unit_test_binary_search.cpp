@@ -15,6 +15,9 @@ TEST(binary_search, simple) {
     int *data = new int[5]{2, 5, 6, 7, 9};
 
     int actual_result = binary_search(data, 5, 9);
+
+    delete[]data;
+
     int expected_result = 4; // index 4
 
     ASSERT_EQ(expected_result, actual_result);
