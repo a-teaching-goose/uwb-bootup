@@ -1,5 +1,6 @@
 #include <cstdio>
 #include <iostream>
+#include <vector>
 
 #include "../1.3_binary_search/binary_search.h"
 
