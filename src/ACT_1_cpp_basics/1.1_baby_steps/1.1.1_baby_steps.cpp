@@ -19,7 +19,7 @@ void increment_by(T *data, T size, T increment);
  * entry point of the program
  */
 int main(int argc, char **argv) {
-    printf("hello 2022 BootUp\n");
+    printf("hello 2024 BootUp\n");
 
     // basics
     baby_steps();
@@ -45,7 +45,7 @@ void baby_steps() {
 
     // ptr to nothing
     int *ptr;
-    ptr = nullptr;
+    ptr = nullptr;  // ptr = 0;
 
     ptr = &var1;    // these two lines can also be written as int *ptr=&var1
 
@@ -66,7 +66,7 @@ void baby_steps() {
     std::cout << ref_a << std::endl;
 
     /*
-     * size
+     * size of variable
      */
     std::cout << "size of var1 is " << sizeof(var1) << "\n";
     std::cout << "size of ptr is " << sizeof(ptr) << "\n";
@@ -78,7 +78,7 @@ void baby_steps() {
     float arr2[5] = {0.1, 0.2, 0.3, 0.4, 0.5};
 
     // allocate (loan) array "dynamically"
-    int *arr3 = new int[3];
+    int *arr3 = new int[3]; // "new" --> "borrow" memory from OS
     for (int i = 0; i < 3; ++i) {
         arr3[i] = i * 2;
     }
