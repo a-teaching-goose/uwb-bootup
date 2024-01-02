@@ -11,7 +11,7 @@ int main(int argc, char **argv) {
     ListNode *head = create_list();
 
     print_single_linked_list(head);
-    //delete_single_linked_list(head);
+    delete_single_linked_list(head);
 }
 
 void print_single_linked_list(ListNode *head) {
@@ -22,7 +22,20 @@ void print_single_linked_list(ListNode *head) {
     }
 }
 
-void delete_single_linked_list(ListNode *head) {
+void delete_single_linked_list(ListNode *node) {
+    if (node == nullptr) {
+        return;
+    }
+
+    if (node->next == nullptr) {
+        printf("node %d deleted\n", node->value);
+        delete node;
+        return;
+    }
+
+    delete_single_linked_list(node->next);
+    printf("node %d deleted\n", node->value);
+    delete node;
 }
 
 /*
