@@ -88,6 +88,16 @@ void baby_steps() {
     delete[] arr3;  // you didn't need this in Java
 
     /*
+     * std container, vector
+     */
+    // if this line below doesn't compile, add -std=c++1z to compiler option (in CLion Run/Edit Config/Compiler Option)
+    // see https://stackoverflow.com/questions/48445191/compile-with-c17-mac
+    std::vector<int> store = {1, 2, 3};
+    for (int i = 0; i < store.size(); ++i) {
+        printf("store[%d] = %d\n", i, store[i]);
+    }
+
+    /*
      * loop
      */
     for (int i = 0; i < 5; i++) {
