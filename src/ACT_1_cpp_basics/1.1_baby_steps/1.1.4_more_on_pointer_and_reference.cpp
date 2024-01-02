@@ -15,7 +15,7 @@ void playground_memory_pointer() {
     int var = 10;
     printf("address of var is %x\n", &var);
 
-    // if this line below doesn't compile, add -std=c++1z to compiler option
+    // if this line below doesn't compile, add -std=c++1z to compiler option (in CLion Run/Edit Config/Compiler Option)
     // see https://stackoverflow.com/questions/48445191/compile-with-c17-mac
     int *arr3 = new int[5]{5, 6, 7, 8, 9};
 
