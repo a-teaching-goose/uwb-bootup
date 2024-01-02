@@ -4,9 +4,14 @@
 
 #define TEST_SIZE 5000
 
+TEST(is_power_of_2_no_loop, zero) {
+    bool actual = is_power_of_2_no_loop(0);
+    ASSERT_EQ(false, actual);
+}
+
 TEST(is_power_of_2, test) {
     // set means a group of values (here of type int) without duplicates
-    std::set<uint> power_of_2s;
+    std::set < uint > power_of_2s;
 
     /*
      * generate test data
@@ -33,8 +38,8 @@ TEST(is_power_of_2, test) {
 }
 
 TEST(list_power_of_2_and_not, test) {
-    std::set<uint> power_of_2s;
-    std::set<uint> none_power_of_2s;
+    std::set < uint > power_of_2s;
+    std::set < uint > none_power_of_2s;
 
     list_power_of_2(TEST_SIZE, power_of_2s, none_power_of_2s);
 
