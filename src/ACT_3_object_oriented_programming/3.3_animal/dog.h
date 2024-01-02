@@ -8,7 +8,7 @@ private:
 
 public:
 
-    Dog(const std::string &name, const std::string &gender, int age);
+    Dog(const std::string &name, const std::string &gender, int age, const std::string &owner);
 
     void speak(const std::string &words);
 

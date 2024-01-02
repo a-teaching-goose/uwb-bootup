@@ -21,7 +21,7 @@ TEST(animal, class_cat) {
 }
 
 TEST(animal, class_dog) {
-    Dog sam("Sam", "male", 3);
+    Dog sam("Sam", "male", 3, "Peng");
     std::string words = "woof!";
     sam.speak(words);
     sam.play("tree branches");
@@ -41,7 +41,7 @@ TEST(animal, class_animal_virtual) {
 TEST(animal, let_all_animal_runs_tedious) {
     Cat coco("Coco", "male", 2);
     Cat annie("Annie", "female", 3);
-    Dog sam("Sam", "male", 2);
+    Dog sam("Sam", "male", 2, "Peng");
 
     coco.speak("hello");
     annie.speak("hello");
@@ -52,7 +52,7 @@ TEST(animal, let_all_animal_runs_using_virtual) {
     Animal *animals[SIZE] = {
             new Cat("Coco", "male", 2),
             new Cat("Annie", "female", 3),
-            new Dog("Sam", "male", 2),
+            new Dog("Sam", "male", 2, "Peng"),
     };
 
     for (int i = 0; i < SIZE; i++) {
