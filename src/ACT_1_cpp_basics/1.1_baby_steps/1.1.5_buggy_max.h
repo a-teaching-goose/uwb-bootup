@@ -16,16 +16,6 @@
     */
 template<typename T>
 int find_max(const T *array, int length) {
-    if (array == nullptr || length == 0) {
-        return T(0);
-    }
-
-    int max = 0;
-    int maxVal = array[0];
-    for (int i = 1; i < length; ++i) {
-        if (array[i] > maxVal) {
-            max = i;
-        }
-    }
-    return max;
+    // TODO
+    // return -1;
 }

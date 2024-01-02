@@ -12,28 +12,7 @@ int main(int argc, char **argv) {
 }
 
 void delete_tree(ListNode *root) {
-    if (root == nullptr) {
-        return;
-    }
-
-    if (root->left != nullptr) {
-        if (root->left->left != nullptr || root->left->right != nullptr) {
-            delete_tree(root->left);
-        } else {
-            printf("node %d deleted\n", root->left->value);
-            delete root->left;
-        }
-    }
-    if (root->right != nullptr) {
-        if (root->right->left != nullptr || root->right->right != nullptr) {
-            delete_tree(root->right);
-        } else {
-            printf("node %d deleted\n", root->right->value);
-            delete root->right;
-        }
-    }
-    printf("node %d deleted\n", root->value);
-    delete root;
+    // TODO
 }
 
 /*

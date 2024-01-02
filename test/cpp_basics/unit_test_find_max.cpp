@@ -8,13 +8,3 @@ TEST(find_max, test_deceptive) {
     int actual = find_max(array, 5);
     ASSERT_EQ(expect, actual);
 }
-
-/*
- * the following test will fail
-TEST(find_max, test_gotcha) {
-    int array[] = {6, 5, 9, 4, 7};
-    int expect = 2;
-    int actual = find_max(array, 5);
-    ASSERT_EQ(expect, actual);
-}
- */

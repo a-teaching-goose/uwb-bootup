@@ -21,27 +21,11 @@
 // 128 -> 1000 0000
 
 bool is_power_of_2_no_loop(uint val) {
-    return val && !(val & (val - 1));
+    // TODO
+    return true;
 }
 
 bool is_power_of_2_loop(uint val) {
-    if (val == 0) {
-        return false;
-    }
-
-    if (val == 1) {
-        return true;
-    }
-
-    /*
-     * try to divide val by 2 all the way to 1.
-     */
-    while (val != 1) {
-        if (val % 2 != 0) {
-            return false;
-        }
-        val /= 2;
-    }
-
+    // TODO
     return true;
 }
