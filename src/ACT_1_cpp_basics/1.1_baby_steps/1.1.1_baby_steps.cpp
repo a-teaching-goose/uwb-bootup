@@ -25,12 +25,22 @@ int main(int argc, char **argv) {
     baby_steps();
 }
 
+void change_string_with_pointer(std::string *str) {
+    *str = "it's sunny today";
+}
+
+void change_string_with_reference(std::string &str) {
+    str = "it's raining today";
+}
+
 void baby_steps() {
     /*
      * variables
      */
     int var1 = 5;
     float var2 = 1.5;
+    std::string str = "it's cloudy today";
+    printf("%s\n", str.c_str());
 
     /*
      * printing
@@ -52,6 +62,9 @@ void baby_steps() {
     std::cout << "pointer ptr has value " << ptr << "\n";
     std::cout << "pointer ptr is pointing to value " << *ptr << "\n";
 
+    change_string_with_pointer(&str);
+    std::cout << str << std::endl;
+
     /*
      * reference
      */
@@ -64,6 +77,9 @@ void baby_steps() {
     ref_a = b;
     ref_a++;
     std::cout << ref_a << std::endl;
+
+    change_string_with_reference(str);
+    std::cout << str << std::endl;
 
     /*
      * size of variable
