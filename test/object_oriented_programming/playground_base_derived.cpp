@@ -12,6 +12,7 @@ TEST(base_derived, use_base_on_stack) {
     PRINT("\t>>>>>> Base capacity: " + TO_STRING(base.get_capacity()));
 
     // base object is delete here when function returns
+    // no problem
 }
 
 // any problem?
@@ -20,6 +21,7 @@ TEST(base_derived, use_base_pointer_on_heap) {
     PRINT("\t>>>>>> Base capacity: " + TO_STRING(p_base->get_capacity()));
 
     // base object pointed by p_base is NOT deleted when function returns.
+    // PROBLEM!
     // uncomment the following line to fix
     // delete p_base;
 }
@@ -39,6 +41,7 @@ TEST(base_derived, use_derived_pointer_on_heap) {
     PRINT("\t>>>>>> Derived capacity: " + TO_STRING(p_derived->get_capacity()));
 
     // derived object pointed by p_derived is NOT deleted when function returns
+    // PROBLEM!
     // uncomment the following line to fix
     // delete p_derived;
 }
@@ -59,6 +62,7 @@ TEST(base_derived, use_base_pointer_on_derived_object) {
     // the following also works, but base class destructor needs to be virtual
     delete p_base;
 }
+
 #endif
 
 /*
