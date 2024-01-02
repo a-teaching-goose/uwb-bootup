@@ -3,7 +3,7 @@
 #include "gtest/gtest.h"
 #include "../util.h"
 
-TEST(binary_search, invalid_length) {
+TEST(binary_search, bad_inputs) {
     std::vector<int> lengths = {0, 1, -2};
     for (int length: lengths) {
         int actual = binary_search(nullptr, length, 3);
