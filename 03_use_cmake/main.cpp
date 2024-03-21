@@ -11,7 +11,7 @@ int main(int argc, char **argv) {
 
 	std::vector<Cat*> *cats = new std::vector<Cat*>;
 
-        cats->push_back(new Cat("Coco", "female", 3)); 
+    cats->push_back(new Cat("Coco", "Male", 3)); 
 
 	std::cout << cats->size() << std::endl;
 	

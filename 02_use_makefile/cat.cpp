@@ -8,4 +8,4 @@ void Cat::purr() {
     speak("purrr...PURRR...");
 }
 
-Cat::Cat(const std::string &name, const std::string &gender, int age) : Animal(name, gender, age) {}
+Cat::Cat(const std::string &name, const std::string &gender, int age) : Pet(name, gender, age) {}

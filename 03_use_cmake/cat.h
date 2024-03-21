@@ -1,7 +1,7 @@
 #include <iostream>
-#include "animal.h"
+#include "pet.h"
 
-class Cat : public Animal {
+class Cat : public Pet {
 
 public:
 
